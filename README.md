@@ -2,7 +2,6 @@
  
      Learn deep metric for image retrieval or other information retrieval.
 
-## More concise loss function done, updated to  Pytorch1.0 !!!
            
 ## Deep metric methods implemented in this repositories:
 
@@ -13,8 +12,8 @@
 - Lifted Structure Loss* [3] (Modified version because of its original weak performance) 
 
 - Binomial BinDeviance Loss [4]
-
-- Distance Weighted Sampling [5] (deleted for poor performance) 
+<!-- 
+- Distance Weighted Sampling [5] (deleted for poor performance)  -->
 
 - NCA Loss [6]
 
@@ -44,10 +43,7 @@
 
 ## Requirements
 * Python >= 3.5
-* PyTorch >= 0.4 
-* tqdm (Optional for `test.py`)
-* tensorboard >= 1.7.0 (Optional for TensorboardX)
-* tensorboardX >= 1.2 (Optional for TensorboardX)
+* PyTorch = 1.0
  
 ### Comparasion with state-of-the-art on CUB-200 and Cars-196
 
@@ -73,6 +69,7 @@
 |ABIER | 74.2 | 86.9 | 94.0 | 97.8 | 83.1 | 95.1 | 96.9 | 97.5 | 97.8 | 98.0|
 |HTL | 74.8| 88.3| 94.8| 98.4 | 80.9| 94.3| 95.8| 97.2| 97.4| 97.8 ||
 
+#### see more detail in our paper [Multi-Similarity Loss](Link_will_be_given_soon)
 
 ##### Reproducing Car-196 (or CUB-200-2011) experiments 
 *** weight :***
