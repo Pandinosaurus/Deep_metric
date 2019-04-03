@@ -17,8 +17,7 @@
 - Distance Weighted Sampling [5] (deleted for poor performance) 
 
 - NCA Loss [6]
- 
-      -WeightLoss  (accepted by CVPR2019, will be public soon.)
+
  
 
 ## Dataset
@@ -61,7 +60,7 @@
 |Margin [5] | 63.6| 74.4| 83.1| 90.0| 94.2 | - | 79.6| 86.5| 91.9| 95.1| 97.3 | - |
 |HTL | 57.1| 68.8| 78.7| 86.5| 92.5| 95.5 | 81.4| 88.0| 92.7| 95.7| 97.4| 99.0 |
 |ABIER |57.5 |68.7 |78.3 |86.2 |91.9 |95.5 |82.0 |89.0 |93.2 |96.1 |97.8 |98.7|
-|Weight|  66.85|  77.84|  85.8|   91.29 |  94.94 |  97.42 |  83.69| 90.27 |  94.53|  97.16 |  98.65 |  99.36|
+
 
 ###  Comparasion with state-of-the-art on SOP and In-shop 
 
@@ -73,7 +72,6 @@
 |Proxy-NCA | 73.7 | - | - | - | -| -| - | - | -| -|
 |ABIER | 74.2 | 86.9 | 94.0 | 97.8 | 83.1 | 95.1 | 96.9 | 97.5 | 97.8 | 98.0|
 |HTL | 74.8| 88.3| 94.8| 98.4 | 80.9| 94.3| 95.8| 97.2| 97.4| 97.8 ||
-| weight|  78.18|  90.47|  96.0|  98.74 |89.64 |97.87|98.47|98.84 |99.05 |99.20|
 
 
 ##### Reproducing Car-196 (or CUB-200-2011) experiments 
@@ -83,14 +81,6 @@
 sh run_train_00.sh
 ```
 
-## TODOs
- 
-- [x] Use SGD to instead of Adam 
-- [x] Update the loss to PyTorch 1.0 version
-- [x] `tensorboardX` Visualization
-- [x] Evalate models during training
-- [x] Multi-GPU support
-- [x] using config file (json or yaml instead of all parameters in bash)
 
 ## References
 
@@ -114,3 +104,6 @@ matters in deep embedding learning. ICCV, 2017.]
 [6][R. Salakhutdinov and G. Hinton. Learning a nonlinear embedding
 by preserving class neighbourhood structure. In
 AISTATS, 2007.]
+
+
+
