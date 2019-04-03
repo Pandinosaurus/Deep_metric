@@ -18,8 +18,7 @@
 
 - NCA Loss [6]
  
- -WeightLoss 
-    My own loss (not public now)
+      -WeightLoss  (accepted by CVPR2019, will be public soon.)
  
 
 ## Dataset
