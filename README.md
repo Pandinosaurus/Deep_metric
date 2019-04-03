@@ -1,6 +1,7 @@
 # Deep Metric Learning in PyTorch
  
-     Learn deep metric for image retrieval or other information retrieval.
+     Learn deep metric for image retrieval or other information retrieval. 
+     <!-- Our work have been accepted by CVPR-2019.  -->
 
            
 ## Deep metric methods implemented in this repositories:
@@ -17,7 +18,7 @@
 
 - NCA Loss [6]
 
- 
+
 
 ## Dataset
 - [Car-196](http://ai.stanford.edu/~jkrause/cars/car_devkit.tgz)
@@ -37,8 +38,11 @@
     For the In-Shop Clothes Retrieval dataset, 3,997 classes with 25,882 images for training.
     And the test set are partitioned to query set with 3,985 classes(14,218 images) and gallery set with 3,985 classes (12,612 images).
 
-
-## Prerequisites
+- [Processed CUB and Cars196](https://pan.baidu.com/s/1LPHi72JPupkvUy_1OIn6yA)
+  
+    Extract code: inmj
+   
+    To easily reimplement the performance, I provide the processed datasets: CUB and Cars-196. 
 
 
 ## Requirements
@@ -69,7 +73,7 @@
 |ABIER | 74.2 | 86.9 | 94.0 | 97.8 | 83.1 | 95.1 | 96.9 | 97.5 | 97.8 | 98.0|
 |HTL | 74.8| 88.3| 94.8| 98.4 | 80.9| 94.3| 95.8| 97.2| 97.4| 97.8 ||
 
-#### see more detail in our paper [Multi-Similarity Loss](Link_will_be_given_soon)
+#### see more detail in our CVPR-2019 paper [Multi-Similarity Loss](Link_will_be_given_soon)
 
 ##### Reproducing Car-196 (or CUB-200-2011) experiments 
 *** weight :***
