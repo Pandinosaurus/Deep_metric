@@ -51,12 +51,12 @@ class HardMiningLoss(nn.Module):
             # neg_loss = 0.04*torch.mean(torch.log(1 + torch.exp(50*(neg_pair - self.margin))))
             loss.append(pos_loss + neg_loss)
 
-            
         loss = sum(loss)/n
         prec = float(c)/n
         mean_neg_sim = torch.mean(neg_pair_).item()
         mean_pos_sim = torch.mean(pos_pair_).item()
-        return  mean_pos_sim, mean_neg_sim, prec, loss
+        return loss, prec, mean_pos_sim, mean_neg_sim
+
 
 def main():
     data_size = 32

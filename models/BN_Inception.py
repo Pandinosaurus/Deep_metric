@@ -255,12 +255,12 @@ class BNInception(nn.Module):
         # Official init from torch repo.
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
-                nn.init.kaiming_normal(m.weight)
+                nn.init.kaiming_normal_(m.weight)
             elif isinstance(m, nn.BatchNorm2d):
-                nn.init.constant(m.weight, 1)
-                nn.init.constant(m.bias, 0)
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
             elif isinstance(m, nn.Linear):
-                nn.init.constant(m.bias, 0)
+                nn.init.constant_(m.bias, 0)
 
     def features(self, input):
         conv1_7x7_s2_out = self.conv1_7x7_s2(input)
@@ -512,7 +512,7 @@ class BNInception(nn.Module):
 def BN_Inception(dim=512, pretrained=True, model_path=None):
     model = BNInception(dim=512)
     if model_path is None:
-        model_path = '/opt/data/users/xunwang/models/bn_inception-239d2248.pth'
+        model_path = '/home/xunwang/.torch/models/bn_inception-52deb4733.pth'
     if pretrained is True:
         model_dict = model.state_dict()
         pretrained_dict = torch.load(model_path)
@@ -522,7 +522,6 @@ def BN_Inception(dim=512, pretrained=True, model_path=None):
     return model
 
 def main():
-    import torch
     model = BN_Inception(dim=512, pretrained=True)
     # print(model)
     images = Variable(torch.ones(8, 3, 227, 227))

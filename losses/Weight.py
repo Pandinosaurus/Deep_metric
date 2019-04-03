@@ -7,7 +7,7 @@ import numpy as np
 
 
 class WeightLoss(nn.Module):
-    def __init__(self, alpha=10, beta=2, margin=0.5, hard_mining=None, **kwargs):
+    def __init__(self, alpha=10, beta=2, margin=0.5, hard_mining=True, **kwargs):
         super(WeightLoss, self).__init__()
         self.margin = margin
         self.alpha = alpha
@@ -33,7 +33,8 @@ class WeightLoss(nn.Module):
             pos_pair_ = torch.sort(pos_pair_)[0]
             neg_pair_ = torch.sort(neg_pair_)[0]
 
-            if self.hard_mining is not None:
+            if self.hard_mining:
+                # print('###############')
                 neg_pair = torch.masked_select(neg_pair_, neg_pair_ + 0.1 > pos_pair_[0])
                 pos_pair = torch.masked_select(pos_pair_, pos_pair_ - 0.1 <  neg_pair_[-1])
                 
@@ -58,7 +59,7 @@ class WeightLoss(nn.Module):
         prec = float(c)/n
         mean_neg_sim = torch.mean(neg_pair_).item()
         mean_pos_sim = torch.mean(pos_pair_).item()
-        return  mean_pos_sim, mean_neg_sim, prec, loss
+        return loss, prec, mean_pos_sim, mean_neg_sim
 
 def main():
     data_size = 32

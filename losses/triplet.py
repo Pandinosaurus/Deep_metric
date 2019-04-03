@@ -66,7 +66,7 @@ class HardMiningLoss(nn.Module):
         prec = float(c)/n
         mean_neg_sim = torch.mean(neg_pair_).item()
         mean_pos_sim = torch.mean(pos_pair_).item()
-        return  mean_pos_sim, mean_neg_sim, prec, loss
+        return loss, prec, mean_pos_sim, mean_neg_sim
 
 
 def main():

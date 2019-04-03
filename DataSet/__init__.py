@@ -1,5 +1,5 @@
 from .CUB200 import CUB_200_2011
-from .Car196 import Car196
+from .Car196 import Cars196
 from .Products import Products
 from .In_shop_clothes import InShopClothes
 # from .transforms import *
@@ -7,7 +7,7 @@ import os
 
 __factory = {
     'cub': CUB_200_2011,
-    'car': Car196,
+    'car': Cars196,
     'product': Products,
     'shop': InShopClothes,
 }

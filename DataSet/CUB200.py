@@ -7,14 +7,15 @@ import torch.utils.data as data
 from PIL import Image
 
 import os
-from DataSet import transforms
+import sys
+from DataSet import transforms 
 from collections import defaultdict
 
 
 def default_loader(path):
     return Image.open(path).convert('RGB')
 
-def Generate_transform_Dict(origin_width=256, width=224, ratio=0.16):
+def Generate_transform_Dict(origin_width=256, width=227, ratio=0.16):
     
     std_value = 1.0 / 255.0
     normalize = transforms.Normalize(mean=[104 / 255.0, 117 / 255.0, 128 / 255.0],
@@ -25,17 +26,17 @@ def Generate_transform_Dict(origin_width=256, width=224, ratio=0.16):
     transform_dict['rand-crop'] = \
     transforms.Compose([
                 transforms.CovertBGR(),
-                transforms.Resize(origin_width),
+                transforms.Resize((origin_width)),
                 transforms.RandomResizedCrop(scale=(ratio, 1), size=width),
                 transforms.RandomHorizontalFlip(),
                 transforms.ToTensor(),
                 normalize,
-            ])
+               ])
 
     transform_dict['center-crop'] = \
     transforms.Compose([
                     transforms.CovertBGR(),
-                    transforms.Resize(origin_width),
+                    transforms.Resize((origin_width)),
                     transforms.CenterCrop(width),
                     transforms.ToTensor(),
                     normalize,
@@ -44,8 +45,7 @@ def Generate_transform_Dict(origin_width=256, width=224, ratio=0.16):
     transform_dict['resize'] = \
     transforms.Compose([
                     transforms.CovertBGR(),
-                    transforms.Resize(width),
-                    transforms.CenterCrop(width),
+                    transforms.Resize((width)),
                     transforms.ToTensor(),
                     normalize,
                 ])
@@ -58,7 +58,7 @@ class MyData(data.Dataset):
 
         # Initialization data path and train(gallery or query) txt path
         if root is None:
-            self.root = "/opt/intern/users/xunwang/DataSet/CUB_200_2011/"
+            self.root = "data/cub/"
         self.root = root
         
         if label_txt is None:
@@ -67,7 +67,6 @@ class MyData(data.Dataset):
         if transform is None:
             transform_dict = Generate_transform_Dict()['rand-crop']
 
-        # read txt get image path and labels
         file = open(label_txt)
         images_anon = file.readlines()
 
@@ -75,7 +74,6 @@ class MyData(data.Dataset):
         labels = []
 
         for img_anon in images_anon:
-            # img_anon = img_anon.replace(' ', '\t')
 
             [img, label] = img_anon.split(' ')
             images.append(img)
@@ -110,13 +108,11 @@ class MyData(data.Dataset):
 
 
 class CUB_200_2011:
-    def __init__(self, width=224, origin_width=256, ratio=0.16, root=None, transform=None):
-        # Data loading code
-        # print('ratio is {}'.format(ratio))
+    def __init__(self, width=227, origin_width=256, ratio=0.16, root=None, transform=None):
+        print('width: \t {}'.format(width))
         transform_Dict = Generate_transform_Dict(origin_width=origin_width, width=width, ratio=ratio)
         if root is None:
-            root = "/opt/intern/users/xunwang/DataSet/CUB_200_2011/"
-
+            root = "data/cub/"
 
         train_txt = os.path.join(root, 'train.txt')
         test_txt = os.path.join(root, 'test.txt')

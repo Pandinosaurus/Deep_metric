@@ -11,7 +11,6 @@ from torchvision import transforms
 from collections import defaultdict
 
 from DataSet.CUB200 import default_loader, Generate_transform_Dict
-# from CUB200 import default_loader, Generate_transform_Dict
 
 
 class MyData(data.Dataset):
@@ -83,13 +82,8 @@ class InShopClothes:
         # Data loading code
         transform_Dict = Generate_transform_Dict(origin_width=origin_width, width=width, ratio=ratio)
 
-        # if crop:
-        #     root = '/opt/intern/users/xunwang/DataSet/In_shop_clothes_retrieval/cropIms'
-        # else:
-        #     root = '/home/xunwang'
-
         if root is None:
-            root = '/opt/intern/users/xunwang/DataSet/In_shop_clothes'
+            root = 'data/In_shop_clothes'
 
         train_txt = os.path.join(root, 'train.txt')
         gallery_txt = os.path.join(root, 'gallery.txt')

@@ -11,18 +11,14 @@ from torchvision import transforms
 from collections import defaultdict
 
 from DataSet.CUB200 import MyData, default_loader, Generate_transform_Dict
-# from CUB200 import MyData, default_loader, Generate_transform_Dict
-# share the same MyData with CUB200
 
 
-class Car196:
-    def __init__(self, root=None, origin_width=256, width=224, ratio=0.16, transform=None):
-        # Data loading code
-
+class Cars196:
+    def __init__(self, root=None, origin_width=256, width=227, ratio=0.16, transform=None):
         if transform is None:
             transform_Dict = Generate_transform_Dict(origin_width=origin_width, width=width, ratio=ratio)
         if root is None:
-            root = '/opt/intern/users/xunwang/DataSet/Car196/'
+            root = 'data/Cars196/'
 
         train_txt = os.path.join(root, 'train.txt')
         test_txt = os.path.join(root, 'test.txt')
@@ -31,7 +27,7 @@ class Car196:
 
 
 def testCar196():
-    data = Car196()
+    data = Cars196()
     print(len(data.gallery))
     print(len(data.train))
     print(data.train[1])

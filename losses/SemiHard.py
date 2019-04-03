@@ -51,15 +51,11 @@ class SemiHardLoss(nn.Module):
             # print(i)
             pos_pair_ = torch.sort(pos_pair_)[0]
             neg_pair_ = torch.sort(neg_sim[i])[0]
-
-            # rand_pos = np.random.randint(len(pos_pair_))
-            # rand_neg = np.random.randint(len(neg_pair_))
         
             neg_pair = torch.masked_select(neg_pair_, neg_pair_ < pos_pair_[-1])
             pos_pair = torch.masked_select(pos_pair_, pos_pair_ > neg_pair_[0])
 
-            if len(pos_pair) > 0:
-                # pos_loss = torch.mean(1 - pos_pair)  
+
                 pos_loss =   2.0/self.beta * torch.log(1 + torch.sum(torch.exp(-self.beta * (pos_pair - base))))      
             else:
                 pos_loss = 0*torch.mean(1 - pos_pair_)
@@ -69,15 +65,13 @@ class SemiHardLoss(nn.Module):
                 neg_loss = 2.0/self.alpha * torch.log(1 + torch.sum(torch.exp(self.alpha * (neg_pair - base))))
             else:
                 neg_loss = 0*torch.mean(neg_pair_)
-            # pos_loss = torch.mean(torch.log(1 + torch.exp(-2*(pos_pair - self.margin))))
-            # neg_loss = 0.04*torch.mean(torch.log(1 + torch.exp(50*(neg_pair - self.margin))))
             loss.append(pos_loss + neg_loss)
 
         loss = sum(loss)/n
         prec = float(c)/n
         mean_neg_sim = torch.mean(neg_pair_).item()
         mean_pos_sim = torch.mean(pos_pair_).item()
-        return  mean_pos_sim, mean_neg_sim, prec, loss
+        return loss, prec, mean_pos_sim, mean_neg_sim
 
 def main():
     data_size = 32

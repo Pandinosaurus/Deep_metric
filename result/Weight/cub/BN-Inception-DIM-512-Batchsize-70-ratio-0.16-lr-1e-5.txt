@@ -1,0 +1,80 @@
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep50.pth.tar'
+False
+Extract Features: [60/60]	Time 0.012 (0.012)	Data 10.010 (10.010)	
+Epoch-50 0.6075  0.7306  0.8285  0.8991  0.9470  0.9730
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep100.pth.tar'
+False
+Extract Features: [60/60]	Time 0.012 (0.012)	Data 9.695 (9.695)	
+Epoch-100 0.6305  0.7497  0.8374  0.9058  0.9445  0.9721
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep150.pth.tar'
+False
+Extract Features: [60/60]	Time 0.012 (0.012)	Data 9.754 (9.754)	
+Epoch-150 0.6437  0.7584  0.8422  0.9088  0.9451  0.9694
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep200.pth.tar'
+False
+Extract Features: [60/60]	Time 0.013 (0.013)	Data 10.393 (10.393)	
+Epoch-200 0.6428  0.7615  0.8506  0.9065  0.9451  0.9708
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep250.pth.tar'
+False
+Extract Features: [60/60]	Time 0.010 (0.010)	Data 10.431 (10.431)	
+Epoch-250 0.6386  0.7456  0.8341  0.8977  0.9416  0.9703
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep300.pth.tar'
+False
+Extract Features: [60/60]	Time 0.013 (0.013)	Data 10.467 (10.467)	
+Epoch-300 0.6482  0.7584  0.8376  0.9009  0.9424  0.9678
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep350.pth.tar'
+False
+Extract Features: [60/60]	Time 0.012 (0.012)	Data 9.870 (9.870)	
+Epoch-350 0.6369  0.7471  0.8309  0.8958  0.9397  0.9654
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep400.pth.tar'
+False
+Extract Features: [60/60]	Time 0.012 (0.012)	Data 10.419 (10.419)	
+Epoch-400 0.6379  0.7468  0.8304  0.8947  0.9365  0.9622
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep50.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.016 (0.016)	Data 9.538 (9.538)	
+Epoch-50 0.6251  0.7426  0.8371  0.9048  0.9455  0.9706
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep100.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.014 (0.014)	Data 9.531 (9.531)	
+Epoch-100 0.6404  0.7522  0.8390  0.9073  0.9462  0.9710
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep150.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.013 (0.013)	Data 10.571 (10.571)	
+Epoch-150 0.6376  0.7551  0.8428  0.9011  0.9429  0.9711
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep200.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.016 (0.016)	Data 9.817 (9.817)	
+Epoch-200 0.6477  0.7595  0.8444  0.9026  0.9428  0.9673
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep250.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.015 (0.015)	Data 10.065 (10.065)	
+Epoch-250 0.6504  0.7556  0.8385  0.9029  0.9445  0.9689
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep300.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.011 (0.011)	Data 9.928 (9.928)	
+Epoch-300 0.6411  0.7568  0.8393  0.9033  0.9429  0.9686
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep350.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.013 (0.013)	Data 9.328 (9.328)	
+Epoch-350 0.6408  0.7475  0.8400  0.8992  0.9379  0.9673
+=> Loaded checkpoint '/opt/FTE/users/xunwang/checkpoints/Weight/cub/BN-Inception-DIM-512-lr1e-5-ratio-0.16-BatchSize-70/ckp_ep400.pth.tar'
+False
+0
+None
+Extract Features: [60/60]	Time 0.013 (0.013)	Data 9.585 (9.585)	
+Epoch-400 0.6328  0.7358  0.8288  0.8937  0.9375  0.9649

@@ -7,7 +7,7 @@ import numpy as np
 
 
 class LiftedStructureLoss(nn.Module):
-    def __init__(self, alpha=40, beta=0, margin=0.5, hard_mining=None,  **kwargs):
+    def __init__(self, alpha=40, beta=2, margin=0.5, hard_mining=None,  **kwargs):
         super(LiftedStructureLoss, self).__init__()
         self.margin = margin
         self.alpha = alpha
@@ -32,12 +32,10 @@ class LiftedStructureLoss(nn.Module):
             neg_pair_ = torch.sort(neg_pair_)[0]
 
             if self.hard_mining is not None:
-                try:
-                    neg_pair = torch.masked_select(neg_pair_, neg_pair_ + 0.1 > pos_pair_[0])
-                    pos_pair = torch.masked_select(pos_pair_, pos_pair_ - 0.1 <  neg_pair_[-1])
-                except IndexError:
-                    import pdb;pdb.set_trace()
                 
+                neg_pair = torch.masked_select(neg_pair_, neg_pair_ + 0.1 > pos_pair_[0])
+                pos_pair = torch.masked_select(pos_pair_, pos_pair_ - 0.1 <  neg_pair_[-1])
+            
                 if len(neg_pair) < 1 or len(pos_pair) < 1:
                     c += 1
                     continue 
@@ -57,12 +55,12 @@ class LiftedStructureLoss(nn.Module):
                 continue
 
             loss.append(pos_loss + neg_loss)
-
         loss = sum(loss)/n
         prec = float(c)/n
         mean_neg_sim = torch.mean(neg_pair_).item()
         mean_pos_sim = torch.mean(pos_pair_).item()
-        return  mean_pos_sim, mean_neg_sim, prec, loss
+        return loss, prec, mean_pos_sim, mean_neg_sim
+
 
 def main():
     data_size = 32
