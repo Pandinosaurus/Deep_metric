@@ -1,7 +1,6 @@
 # Deep Metric Learning in PyTorch
  
      Learn deep metric for image retrieval or other information retrieval. 
-     <!-- Our work have been accepted by CVPR-2019.  -->
 
            
 ## Deep metric methods implemented in this repositories:
@@ -13,8 +12,6 @@
 - Lifted Structure Loss* [3] (Modified version because of its original weak performance) 
 
 - Binomial BinDeviance Loss [4]
-<!-- 
-- Distance Weighted Sampling [5] (deleted for poor performance)  -->
 
 - NCA Loss [6]
 
