@@ -4,7 +4,7 @@ from .NCA import NCALoss
 from .Contrastive import ContrastiveLoss
 from .Binomial import BinomialLoss
 from .LiftedStructure import LiftedStructureLoss
-from .Weight import WeightLoss
+# from .Weight import WeightLoss
 from .HardMining import HardMiningLoss
 
 __factory = {
@@ -12,7 +12,7 @@ __factory = {
     'Contrastive': ContrastiveLoss,
     'Binomial': BinomialLoss,
     'LiftedStructure': LiftedStructureLoss,
-    'Weight': WeightLoss,
+    # 'Weight': WeightLoss,
     'HardMining': HardMiningLoss,
 }
 
