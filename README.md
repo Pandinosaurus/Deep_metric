@@ -70,7 +70,7 @@
 |ABIER | 74.2 | 86.9 | 94.0 | 97.8 | 83.1 | 95.1 | 96.9 | 97.5 | 97.8 | 98.0|
 |HTL | 74.8| 88.3| 94.8| 98.4 | 80.9| 94.3| 95.8| 97.2| 97.4| 97.8 ||
 
-#### see more detail in our CVPR-2019 paper [Multi-Similarity Loss](Link_will_be_given_soon)
+#### see more detail in our CVPR-2019 paper [Multi-Similarity Loss](https://arxiv.org/pdf/1904.06627.pdf)
 
 ##### Reproducing Car-196 (or CUB-200-2011) experiments 
 *** weight :***
